@@ -601,7 +601,7 @@
             <div class="container">
                 Projet NER Francophone &mdash; BiLSTM &middot; PyTorch &middot; WikiNER-FR
                 <br><br>
-                <a href="https://github.com/TODO" target="_blank">Code source sur GitHub</a>
+                <a href="https://github.com/arsenicophe/ner-francophone" target="_blank">Code source sur GitHub</a>
             </div>
         </footer>
     </div>
@@ -675,30 +675,30 @@
             {"token":"Emmanuel","tag":"PER"},{"token":"Macron","tag":"PER"},
             {"token":"a","tag":"O"},{"token":"prononce","tag":"O"},
             {"token":"un","tag":"O"},{"token":"discours","tag":"O"},
-            {"token":"devant","tag":"O"},{"token":"l'Assemblee","tag":"ORG"},
-            {"token":"nationale","tag":"ORG"},{"token":"a","tag":"O"},
+            {"token":"devant","tag":"O"},{"token":"l'Assemblee","tag":"LOC"},
+            {"token":"nationale","tag":"LOC"},{"token":"a","tag":"LOC"},
             {"token":"Paris","tag":"LOC"}
         ],
         "L'equipe de France a remporte la Coupe du Monde en Russie en 2018": [
-            {"token":"L'equipe","tag":"O"},{"token":"de","tag":"O"},
-            {"token":"France","tag":"LOC"},{"token":"a","tag":"O"},
+            {"token":"L'equipe","tag":"PER"},{"token":"de","tag":"PER"},
+            {"token":"France","tag":"ORG"},{"token":"a","tag":"O"},
             {"token":"remporte","tag":"O"},{"token":"la","tag":"O"},
-            {"token":"Coupe","tag":"MISC"},{"token":"du","tag":"MISC"},
-            {"token":"Monde","tag":"MISC"},{"token":"en","tag":"O"},
+            {"token":"Coupe","tag":"MISC"},{"token":"du","tag":"O"},
+            {"token":"Monde","tag":"O"},{"token":"en","tag":"O"},
             {"token":"Russie","tag":"LOC"},{"token":"en","tag":"O"},
             {"token":"2018","tag":"O"}
         ],
         "Google et Microsoft investissent dans l'intelligence artificielle en Europe": [
             {"token":"Google","tag":"ORG"},{"token":"et","tag":"O"},
-            {"token":"Microsoft","tag":"ORG"},{"token":"investissent","tag":"O"},
-            {"token":"dans","tag":"O"},{"token":"l'intelligence","tag":"O"},
-            {"token":"artificielle","tag":"O"},{"token":"en","tag":"O"},
+            {"token":"Microsoft","tag":"ORG"},{"token":"investissent","tag":"MISC"},
+            {"token":"dans","tag":"O"},{"token":"l'intelligence","tag":"MISC"},
+            {"token":"artificielle","tag":"MISC"},{"token":"en","tag":"O"},
             {"token":"Europe","tag":"LOC"}
         ],
         "Victor Hugo a ecrit Les Miserables pendant son exil a Guernesey": [
             {"token":"Victor","tag":"PER"},{"token":"Hugo","tag":"PER"},
             {"token":"a","tag":"O"},{"token":"ecrit","tag":"O"},
-            {"token":"Les","tag":"MISC"},{"token":"Miserables","tag":"MISC"},
+            {"token":"Les","tag":"O"},{"token":"Miserables","tag":"O"},
             {"token":"pendant","tag":"O"},{"token":"son","tag":"O"},
             {"token":"exil","tag":"O"},{"token":"a","tag":"O"},
             {"token":"Guernesey","tag":"LOC"}

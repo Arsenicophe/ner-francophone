@@ -32,11 +32,15 @@ def load_model(path: Path = SAVE_PATH) -> tuple[BiLSTMNER, Vocabulary]:
     """Charge le modele et le vocabulaire depuis un checkpoint."""
     checkpoint = torch.load(path, map_location=DEVICE, weights_only=True)
     vocab = Vocabulary()
-    vocab.word2idx = checkpoint["vocab_word2idx"]
+    # Supporte les deux formats de checkpoint (local et Colab)
+    if "vocab_word2idx" in checkpoint:
+        vocab.word2idx = checkpoint["vocab_word2idx"]
+    elif "vocab_state" in checkpoint:
+        vocab.word2idx = checkpoint["vocab_state"]["word2idx"]
     vocab.idx2word = {i: w for w, i in vocab.word2idx.items()}
     hp = checkpoint["hyperparams"]
     model = BiLSTMNER(
-        vocab_size=hp["vocab_size"],
+        vocab_size=hp.get("vocab_size", len(vocab)),
         embedding_dim=hp["embedding_dim"],
         hidden_dim=hp["hidden_dim"],
         num_tags=hp["num_tags"],
